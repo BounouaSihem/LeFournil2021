@@ -1,0 +1,32 @@
+[
+{
+    "id":1,
+	"deliveryPointAdress":"Foutnil de Blausasc",
+	"deliveryDate":"",
+	"orderDeadline":""
+			     
+},
+{
+    "id":2,
+	"deliveryPointAdress":"Place fontaine du temple",
+	"deliveryDate":"",
+	"orderDeadline":""
+
+			     
+},
+{
+    "id":3,
+	"deliveryPointAdress":"Pessicart",
+	"deliveryDate":"",
+	"orderDeadline":""
+			     
+},
+{
+    "id":4,
+	"deliveryPointAdress":"AMAP Valrose",
+	"deliveryDate":"",
+	"orderDeadline":""
+			     
+}
+
+]

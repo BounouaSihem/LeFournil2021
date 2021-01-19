@@ -1,0 +1,144 @@
+[
+{
+    "id":1,
+	"frequencyCommandeProductEnum":"Option_Ponctuel"
+			     
+},
+{
+    "id":2,
+	"frequencyCommandeProductEnum":"Option_One_OneMonth"
+			     
+},
+{
+    "id":3,
+	"frequencyCommandeProductEnum":"Option_One_TwoMonth"
+			     
+},
+{
+    "id":4,
+	"frequencyCommandeProductEnum":"Option_One_ThreeMonth"
+			     
+},
+{
+    "id":5,
+	"frequencyCommandeProductEnum":"Option_One_FourMonth"
+			     
+},
+{
+    "id":6,
+	"frequencyCommandeProductEnum":"Option_One_FiveMonth"
+			     
+},
+{
+    "id":7,
+	"frequencyCommandeProductEnum":"Option_One_SixMonth"
+			     
+},
+{
+    "id":8,
+	"frequencyCommandeProductEnum":"Option_One_SevenMonth"
+			     
+},
+{
+    "id":9,
+	"frequencyCommandeProductEnum":"Option_One_EightMonth"
+			     
+},
+{
+    "id":10,
+	"frequencyCommandeProductEnum":"Option_One_NineMonth"
+			     
+},
+{
+    "id":11,
+	"frequencyCommandeProductEnum":"Option_One_TenMonth"
+			     
+},
+{
+    "id":12,
+	"frequencyCommandeProductEnum":"Option_One_ElevenMonth"
+			     
+},
+{
+    "id":13,
+	"frequencyCommandeProductEnum":"Option_One_TwelveMonth"
+			     
+},
+{
+    "id":14,
+	"frequencyCommandeProductEnum":"Option_Alter_OneMonth"
+			     
+},
+{
+    "id":15,
+	"frequencyCommandeProductEnum":"Option_Alter_TwoTwoMonth"
+			     
+},
+{
+    "id":16,
+	"frequencyCommandeProductEnum":"Option_Alter_ThreeMonth",
+			     
+},
+{
+    "id":17,
+	"frequencyCommandeProductEnum":"Option_Alter_FourMonth",
+			     
+},
+{
+    "id":18,
+	"frequencyCommandeProductEnum":"Option_Alter_FiveMonth",
+			     
+},
+{
+    "id":19,
+	"frequencyCommandeProductEnum":"Option_Alter_SixMonth",
+			     
+},
+{
+    "id":20,
+	"frequencyCommandeProductEnum":"Option_Alter_SevenMonth",
+			     
+},
+{
+    "id":21,
+	"frequencyCommandeProductEnum":"Option_Alter_EightMonth",
+			     
+},
+{
+    "id":22,
+	"frequencyCommandeProductEnum":"Option_Alter_NineMonth",
+			     
+},
+{
+    "id":23,
+	"frequencyCommandeProductEnum":"Option_Alter_TenMonth",
+			     
+},
+{
+    "id":24,
+	"frequencyCommandeProductEnum":"Option_Alter_ElevenMonth",
+			     
+},
+{
+    "id":25,
+	"frequencyCommandeProductEnum":"Option_Alter_TwelveMonth",
+			     
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

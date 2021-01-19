@@ -1,0 +1,49 @@
+<header class="header">
+    <mat-toolbar color="primary" class="sticky">
+        <mat-toolbar-row fxLayoutAlign="space-between center">
+            <div fxLayout="row">
+                <div class="fournil">
+                    <a mat-button [routerLink]="['/home']">
+                        <mat-icon>home</mat-icon>
+                        <span class="logo">Le Fournil de Blausasc</span>
+                    </a>
+                </div>
+                    <div  fxLayout="row" class="menu-item">
+
+                        <div class="list-items"><a mat-button [routerLink]="['/infos']"> Présentation</a></div>
+                        <div class="list-items"><a mat-button [routerLink]="['/nos-produits']"> Nos Produits</a></div>
+                        <div class="list-items"><a mat-button [routerLink]="['/livraisons']"> Livraisons</a></div>
+                        <div class="list-items"><button mat-button>
+                                <mat-icon>shopping_cart</mat-icon>
+                                <span class="logo-panier">Mon Panier</span>
+                            </button></div>
+                    </div>
+                
+                <div class="moncompte">
+
+                    <button  mat-icon-button [matMenuTriggerFor]="menu">
+                        <mat-icon>person</mat-icon>  Espace personnel
+                    </button>
+                   
+                </div>
+            </div>
+        </mat-toolbar-row>
+
+       <!-- <mat-toolbar-row fxLayoutAlign="space-between end">
+            <div class="list-items-xs"><a mat-button routerLink="infos"> Présentation</a></div>
+            <div class="list-items-xs"><a mat-button routerLink="nos-produits"> Nos Produits</a></div>
+            <div class="list-items-xs"><a mat-button routerLink="livraisons"> Livraisons</a></div>
+            <div class="list-items-xs"><button mat-button>
+                    <mat-icon>shopping_cart</mat-icon>
+                </button></div>
+        </mat-toolbar-row>-->
+
+    </mat-toolbar>
+
+    <!-- Menu Items -->
+    <mat-menu #menu="matMenu" fxLayoutAlign="end">
+        <button mat-menu-item>Connexion</button>
+        <button mat-menu-item>Créer un compte</button>
+        <button mat-menu-item>Déconnexion</button>
+    </mat-menu>
+</header>

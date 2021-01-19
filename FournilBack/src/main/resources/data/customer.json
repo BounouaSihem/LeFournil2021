@@ -1,0 +1,63 @@
+[
+
+{
+    "id": 1,
+    "firstName": "Romain",
+    "lastName": "Morini",
+    "email": "r.morini@yahoo.fr",
+    "mobileNumber":"06 65 18 19 00",
+    "isPresentInDB":true,
+    "commandeSet":[]
+  
+},
+{
+ 	"id": 2,
+    "firstName": "Sihem",
+    "lastName": "BOUNOUA",
+    "email": "bounouasihem@gmail.com",
+    "mobileNumber":"06 42 46 78 94",
+    "isPresentInDB":true,
+    "commandeSet":[]
+   
+
+    
+},
+
+{
+	"id": 3,
+    "firstName": "Sara",
+    "lastName": "Susy",
+    "email": "susyghost@hotmail.fr",
+    "mobileNumber":"06 42 46 78 94",
+    "isPresentInDB":true,
+    "commandeSet":[]
+   
+    
+},
+
+{
+	"id":4,
+    "firstName": "Romain",
+    "lastName": "Morini Bleusasc",
+    "email": "fournilblausasc@yahoo.fr",
+    "mobileNumber":"06 42 46 78 94",
+    "isPresentInDB":true,
+    "commandeSet":[]
+   
+    
+},
+
+{
+    "id": 5,
+    "firstName": "Ocean",
+    "lastName": "Bleu",
+    "email": "aldebaran05@hotmail.com",
+    "mobileNumber":"06 42 46 78 94",
+    "isPresentInDB":true,
+    "commandeSet":[]
+   
+   
+}
+
+]
+

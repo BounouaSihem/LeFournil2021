@@ -1,0 +1,60 @@
+.background {
+    background-image: url("/assets/shared/img/img-home/Le-Fournil_background.jpg");
+   
+    width: 100%;
+   
+}
+
+.container1 {
+    background-image: url("/assets/shared/img/img-home/FotoDiv2.png");
+    background-position: bottom center;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: cover;
+    margin-top: 100px;
+    width:100%;
+    justify-content: center;
+    vertical-align:top;
+    height: 879px ;
+}
+.Texte1{
+    height: 100%;
+}
+.home-container {
+    width: 100%;
+}
+
+.container1 p{
+    color: #f7f3eb;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+    font-size: 59px;
+    line-height: 1.2em;
+    margin-top: 100px;  
+}
+
+.boutoncommande button {
+    background: rgba(156, 40, 30, 0.95);
+    font-size: 20px;
+    align-items: center;
+    align-content: center;
+}
+
+.boutoncommande {
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.Texte1 p {  
+    font-family: 'Playball', cursive;
+    margin-left: 40px;
+    
+}
+
+p {
+    
+}

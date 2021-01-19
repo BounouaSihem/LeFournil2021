@@ -1,0 +1,7 @@
+.about {
+    margin-top: 200px;
+    background: rgb(220,202,145);
+    background: linear-gradient(180deg, rgba(220,202,145,1) 35%, rgba(255,255,255,1) 100%);
+    width: 100%;
+}
+

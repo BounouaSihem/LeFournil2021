@@ -1,0 +1,58 @@
+[
+
+{
+	"id":1,
+	"product": {"id":1,"productName":"Pain de campagne"},
+	"quantity":2,
+	"frequencyDeliveryType":{"id":2},
+	"totalPricePerProduct":12.0,
+	"shoppingCart":[{"id": 1}]
+},
+
+{
+
+    "id":2,
+	"product": {"id":2,"productName":"Pain aux céréales"},
+	"quantity":1,
+	"frequencyDeliveryType":{"id":1},
+	"totalPricePerProduct":3.0,
+	"shoppingCart":[{"id":2}]
+},
+
+{
+    "id":3,
+	"product": {"id":3,"productName":"Pain bis ou semi complet"},
+	"quantity":2,
+	"frequencyDeliveryType":{"id":2},
+	"totalPricePerProduct":12.0,
+	"shoppingCart":[{"id":2}]
+
+},
+
+{
+
+    "id":4,
+	"product": {"id":4,"productName":"Pain à  l'Engrain (ou petit Epeautre)"},
+	"quantity":5,
+	"frequencyDeliveryType":{"id":19},
+	"totalPricePerProduct":18.0,
+	"shoppingCart":[{"id":3}, {"id":5}]
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+
+
+

@@ -1,0 +1,43 @@
+.sticky {
+    padding: 0px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 10;
+    background: rgba(112,29,22,.95);
+  }
+ 
+  .logo {
+    padding: 0px 5px;
+    font-size: 30px;
+    color:#dcca91;
+    font-family: 'Playball', cursive;
+  }
+
+  .menu-item {
+      padding-left: 100px;
+  }
+
+  .list-items {
+
+    display: inline-block;
+    margin-right: 50px;
+    padding-left: 20px;
+    color:#dcca91;
+    /*font-family: Amaranth!important;*/
+  }
+.moncompte {
+  color:#dcca91;
+}
+
+.mat-icon {
+  color:#dcca91;
+}
+
+.list-items-xs {
+  color:#dcca91;
+}
+
+ 
+ 
+

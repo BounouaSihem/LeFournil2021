@@ -1,0 +1,54 @@
+<div *ngIf="isloading " class="background-spinner">
+    <div class="spinner">
+        <mat-progress-spinner mat-progress-spinner class="spinner" mode="indeterminate" color="warn">
+        </mat-progress-spinner>
+    </div>
+</div>
+<ng-container *ngIf="!isloading ">
+
+    <div class="example-sidenav-content" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="20px"
+        fxLayoutGap.xs="20px" fxLayoutAlign="center center">
+        <mat-card class="example-card" fxFlex="25" *ngFor="let product of products ">
+
+            <div class="container">
+                <img mat-card-img (click)="detailsProduct(product.id)"
+                    [src]="this.urlimageBackEnd + '/products/'+product.id +'/photo/'+0 " alt="image product"
+                    class="image">
+
+                <div class="middle">
+                    <div class="text">Voir ce produit</div>
+                </div>
+
+            </div>
+
+            <mat-card-content>
+                <br>
+                <p class="productTitle">{{product?.productName}}</p>
+                <p class="prix"> à partir de :
+                    {{product?.productPerKgPrice*product?.formatSet[0].formatWeight | number:'1.2-2'}} €</p>
+               <p class="descriptif">{{product?.productSummary}}</p>
+
+                <div class="form-button"  fxLayout="row" fxLayout.xs="row">
+                    <div class="product-form" >
+
+                        <mat-card-actions>
+                            <div class="boutoncommande" >
+                                <button  mat-raised-button  (click)="openDialog(product.id)" >Commander ce produit</button>
+                            </div>
+                            <div class="star-rating"><span class="material-icons">star</span><span
+                                    class="material-icons">star</span><span class="material-icons">
+                                    star_half
+                                </span><span class="material-icons">
+                                    star_outline
+                                </span></div>
+                        </mat-card-actions>
+                    </div>
+
+                </div> 
+
+            </mat-card-content>
+           
+        </mat-card>
+    </div>
+
+</ng-container>
