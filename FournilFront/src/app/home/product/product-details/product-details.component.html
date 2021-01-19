@@ -1,0 +1,59 @@
+<div *ngIf="isloading  " class="background-spinner">
+    <div class="spinner">
+      <mat-progress-spinner class="spinner" mode="indeterminate" color="warn" ></mat-progress-spinner>
+    </div>
+  </div>
+  <ng-container *ngIf="!isloading  " >
+
+<div class="container" fxLayout="row" fxLayout.xs="col">
+    <div class="div-image">
+        <div class="image-big" *ngFor="let photoproduct of photoProductSet;let indexOfelement=index">
+            <img [src]= "this.urlimageBackEnd + '/products/'+this.product.id +'/photo/'+indexOfelement " alt="Photo" class="image">
+        </div>
+     
+    </div>
+    <div class="product-details">
+        <div class="product-title">{{product?.productName}}</div>
+        <div class="product-price">A partir de : {{product?.productPerKgPrice*product?.formatSet[0].formatWeight | number:'1.2-2'}} €</div>
+        <div class="product-description">{{product?.productSpecification}}</div><br>
+        <div class="product-composition">{{product?.productComposition}} </div><br>
+        <div class="form-button" fxLayout="row" fxLayout.xs="row">
+            <div class="product-form">
+                <mat-form-field appearance="fill">
+                    <mat-label >Choisir la quantité</mat-label>
+                    <input matInput [(ngModel)]="productQuantities" type="number" style="position:center">
+                  </mat-form-field>
+                <br>
+                <mat-form-field  appearance="fill">
+                    <mat-label >Selectionner un format</mat-label>
+                    <mat-select  > 
+                        <mat-option *ngFor="let format of formatSet" [value]="format.formatType" >
+                      
+                            <div *ngIf="format.formatWeight < 1 " >
+                        {{format.formatType}}, {{format.formatWeight*1000}} gr , {{product.productPerKgPrice*format.formatWeight | number:'1.2-2'}} €</div>
+                      <div *ngIf="format.formatWeight >= 1">
+                        {{format.formatType}}, {{format.formatWeight}} Kg , {{product.productPerKgPrice*format.formatWeight | number:'1.2-2'}} €</div>
+                       
+                    </mat-option>
+                          
+                    </mat-select>
+                  
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Selectionner la fréquence</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let frequence of frequence" [value]="frequence.frequencyCommandeProduct" >
+                            
+                            {{frequence.frequencyCommandeProduct}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="boutoncommande">
+                <button button mat-raised-button>Ajouter au panier</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</ng-container>

@@ -1,0 +1,131 @@
+[
+{
+ "id":1,
+ "formatType":"Baguette",
+ "formatWeight":0.25,
+ "productList":[{"id":1},{"id" :2},{"id":3}]
+},
+
+{
+ "id":2,
+ "formatType":"Petite miche",
+ "formatWeight":0.50,
+ "productList":[{"id":1},{"id":3}]
+},
+
+{
+ "id":3,
+ "formatType":"Moyenne miche",
+ "formatWeight":0.75,
+ "productList":[{"id":1},{"id":3}]
+},
+
+{
+ "id":4,
+ "formatType":"Grande miche",
+ "formatWeight":1.00,
+ "productList":[{"id":1},{"id":3}]
+},
+
+{
+ "id":5,
+ "formatType":"Petit batard",
+ "formatWeight":0.50,
+ "productList":[{"id":2}]
+},
+
+{
+ "id":6,
+ "formatType":"Moyen batard",
+ "formatWeight":0.75,
+ "productList":[{"id":2}]
+},
+
+{
+ "id":7,
+ "formatType":"Grand batard",
+ "formatWeight":1.00,
+ "productList":[{"id":2}]
+},
+
+{
+ "id":8,
+ "formatType":"pavé droit (moulé)",
+ "formatWeight":0.50,
+ "productList":[{"id":4}, {"id":5}]
+
+},
+
+{
+ "id":9,
+ "formatType":"Fougasse",
+ "formatWeight":0.35,
+ "productList":[{"id":6},{"id":7},{"id":8}]
+},
+
+{
+ "id":10,
+ "formatType":"Brioche grande pavée",
+ "formatWeight":0.40,
+ "productList":[{"id":9},{"id":10},{"id":11}]
+},
+
+{
+ "id":11,
+ "formatType":"Brioche petite pavée",
+ "formatWeight":0.20,
+ "productList":[{"id":9},{"id":10},{"id":11}]
+
+},
+
+{
+ "id":12,
+ "formatType":"Brioche grande tressée",
+ "formatWeight":0.40,
+ "productList":[{"id":9},{"id":10},{"id":11}]
+},
+
+{
+ "id":13,
+ "formatType":"Brioche petite tressée",
+ "formatWeight":0.20,
+ "productList":[{"id":9},{"id":10},{"id":11}]
+},
+
+{
+ "id":14,
+ "formatType":"Brioche individuelle en boule",
+ "formatWeight":0.10,
+ "productList":[{"id":9},{"id":10},{"id":11}]
+},
+
+{
+ "id":15,
+ "formatType":"Croissant pure beurre",
+ "formatWeight":0.07,
+ "productList":[{"id":12}]
+},
+
+{
+ "id":16,
+ "formatType":"Pain au chocolat pure beurre",
+ "formatWeight":0.08,
+ "productList":[{"id":13}]
+},
+
+{
+ "id":17,
+ "formatType":"Cookies",
+ "formatWeight":0.032,
+ "productList":[{"id":14}]
+},
+
+{
+ "id":18,
+ "formatType":"Sablés agrumes",
+ "formatWeight":0.032,
+ "productList":[{"id":15}]
+
+}
+
+]

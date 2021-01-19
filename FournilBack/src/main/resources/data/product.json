@@ -1,0 +1,190 @@
+[
+
+{
+
+    "id":1,
+	"productName":"Pain de campagne",
+	"productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":6.0,
+	"productComposition":"farine de blé type T110 (80%), farine de seigle type T170 (20%), eau, sel de Guérande, levain.",
+	"photoProductSet": [],
+    "formatSet":[],
+    "limitStockProduct": 60
+},
+
+{
+
+     "id":2,
+	 "productName":"Pain aux céréales",
+	 "productSummary":"hsghsg",
+	 "productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	 "productPerKgPrice":6.60,
+	 "productComposition":"farine de blé type T110 (80%), farine de seigle type T170 (20%), mélange de graines (lin, tournesol, millet, sésame), eau, sel de Guérande, levain.",
+	 "photoProductSet": [],
+	 "formatSet":[],
+     "limitStockProduct":60
+},
+
+{
+
+    "id":3,
+	"productName":"Pain bis ou semi complet",
+	"productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":6.0,
+	"productComposition":"farine de blé type T80, eau, sel de Guérande, levain.",
+	"photoProductSet": [],
+	"formatSet":[],
+    "limitStockProduct": 60
+},
+
+{
+
+    "id":4,
+    "productName":"Pain à l'Engrain (ou petit Epeautre)",
+	"productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":10.0,
+	"productComposition":"farine d'Engrain complète (60%), farine de blé type T110 (40%), eau, sel de Guérande, levain.",
+	"photoProductSet": [],
+	"formatSet": [],
+    "limitStockProduct": 60
+},
+
+{
+
+    "id": 5,
+	"productName":"Pain au Khorasan",
+	"productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":8.00,
+	"productComposition":"farine de Khorasan complète (70%), farine de blé type T110 (30%), eau, sel de Guérande, levain.",
+	"photoProductSet": [],
+	"formatSet" :[],
+    "limitStockProduct": 60
+
+},
+
+{   "id":6,
+	"productName":"Fougasse",
+	"productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":6.00,
+	"productComposition":"Farine de blé type T80, eau, sel de Guérande, levain, huile d'olives.",
+	"photoProductSet": [],
+	"formatSet" :[],
+    "limitStockProduct": 15
+
+},
+
+{
+    "id":7,
+	"productName":"Fougasse aux olives vertes",
+	"productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":7.70,
+	"productComposition":"Farine de blé type T80, eau, sel de Guérande, levain, huile d'olives, olives vertes.",
+	"photoProductSet": [],
+	"formatSet": [],
+    "limitStockProduct": 15
+},
+
+{
+    "id":8,
+	"productName":"Fougasse aux noix",
+	"productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":7.70,
+	"productComposition":"Farine de blé type T80, eau, sel de Guérande, levain, huile d'olives, noix",
+	"photoProductSet": [],
+    "formatSet": [],
+    "limitStockProduct": 15
+},
+
+{
+    "id":9,
+    "productName":"Brioche pure beurre",
+    "productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":12.00,
+	"productComposition":"Farine de blé type 55, beurre, œufs, lait, sucre, sel, levure.",
+	"photoProductSet": [],
+	"formatSet": [],
+    "limitStockProduct": 15
+
+},
+
+{
+	"id":10,
+	"productName":"Brioche pure beurre praline",
+    "productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":15.00,
+	"productComposition":"Farine de blé type 55, beurre, œufs, lait, sucre, sel, levure, pralines (amandes, sucre).",
+	"photoProductSet": [],
+	"formatSet": [],
+    "limitStockProduct": 25
+
+},
+
+{
+	"id":11,
+	"productName":"Brioche pure beurre chocolat",
+    "productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":13.00,
+	"productComposition":"Farine de blé type 55, beurre, œufs, lait, sucre, sel, levure, chocolat.",
+	"photoProductSet": [],
+	"formatSet": [],
+    "limitStockProduct": 25
+},
+
+{
+	"id":12,
+	"productName":"Croissant pure beurre",
+    "productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":10.00,
+	"productComposition":"Farine de blé type 55, beurre, eau, sucre, sel, levure.",
+	"photoProductSet": [],
+	"formatSet": [],
+    "limitStockProduct": 20
+},
+
+{
+	"id":13,
+	"productName":"Pain au chocolat pure beurre",
+    "productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":12.50,
+	"productComposition":"Farine de blé type 55, beurre, eau, sucre, sel, levure, chocolat.",
+	"photoProductSet": [],
+	"formatSet": [],
+    "limitStockProduct": 20
+},
+
+{
+	"id":14,
+	"productName":"Cookies",
+    "productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":15.63,
+	"productComposition":"Farine de blé type 55, beurre, poudre d'amande, poudre de noisette, pralin, œufs, sucre, levure chimique, chocolat.",
+	"photoProductSet": [],
+	"formatSet": [],
+    "limitStockProduct": 45
+},
+
+{
+	"id":15,
+	"productName":"Sablés agrumes",
+    "productSummary":"hsghsg",
+	"productSpecification":"sdfsdfsdfsdfsdfffffffffffffffff",
+	"productPerKgPrice":15.63,
+	"productComposition":"Farine de blé type 55, beurre, œufs, zestes et jus d'agrumes, sucre, levure chimique.",
+	"photoProductSet": [],
+	"formatSet": [],
+    "limitStockProduct": 45
+}
+]
