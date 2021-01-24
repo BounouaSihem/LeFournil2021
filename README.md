@@ -1,6 +1,6 @@
 # read-me
 
-Projet Fullstack Angular/JAVA J2EE (en remote/pair-programming) "from scratch"
+Projet Fullstack Angular/JAVA J2EE 
 
 Création d'un site de vente en ligne de produits de boulangerie.
 
