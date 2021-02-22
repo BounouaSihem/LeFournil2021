@@ -1,11 +1,12 @@
 # read-me
 
-Projet Fullstack Angular/JAVA J2EE 
+Projet Fullstack Angular/JAVA SpringBoot from scratch
 
 Création d'un site de vente en ligne de produits de boulangerie.
 
 Technologies & languages utilisés: 
   - JAVA/JEE
+  - SpringBoot
   - Angular9
   - HTML5
   - CSS3
