@@ -46,6 +46,11 @@ public findAllFrequence(): Promise<any> {
 public findFrequenceById(id: number): Promise<any> {
   return this.api.get({ endpoint: `/frequency_delivery_type/${id}`})
 }
+
+// route pour recuperer l'adresse de livraison :
+public findAllDeliveryAdresse(): Promise<any> {
+  return this.api.get({ endpoint: '/commandes/deliveryPointAdressAndDates' });
+}
 //route pour recuperer une photo d'un produitId
 public getOnePhotobyProductId(photoId:number): Promise<any> {
   let promise = new Promise((resolve, reject) => {

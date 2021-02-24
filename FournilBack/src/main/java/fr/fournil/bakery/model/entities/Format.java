@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -30,7 +31,10 @@ public class Format {
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
 	@JsonIgnore
 	private Set<Product> productList = new HashSet<>();
-
+    
+	// @OneToOne(mappedBy = "format", cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
+	 //  @JsonIgnore
+	  // private ProductInCart productIncart;
 	public Format() {
 		super();
 	}

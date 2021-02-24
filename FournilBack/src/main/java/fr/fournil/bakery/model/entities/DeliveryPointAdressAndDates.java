@@ -23,6 +23,8 @@ import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.NaturalId;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="deliveryPointAdressAndDates")
 public class DeliveryPointAdressAndDates {
@@ -48,6 +50,7 @@ public class DeliveryPointAdressAndDates {
 	
 	
 	@OneToMany(mappedBy = "deliveryPointAdressAndDates", cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
+	 @JsonIgnore
 	private Set<Commande> commandeSet = new HashSet<Commande>();
 
 	public DeliveryPointAdressAndDates() {

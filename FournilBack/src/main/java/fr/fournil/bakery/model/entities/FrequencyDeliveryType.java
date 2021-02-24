@@ -36,7 +36,7 @@ public class FrequencyDeliveryType {
 	private String frequencyCommandeProduct;
 	//private FrequencyCommandeProductEnum  frequencyCommandeProductEnum;
 	
-	
+	private Integer factorFrequency;
 	   
 	   @OneToMany(mappedBy = "frequencyDeliveryType", cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
 	   @JsonIgnore
@@ -46,38 +46,60 @@ public class FrequencyDeliveryType {
 		super();
 	}
 
-	public FrequencyDeliveryType(Long id, String frequencyCommandeProduct, Set<ProductInCart> productInCartSet) {
+	
+	public FrequencyDeliveryType(Long id, String frequencyCommandeProduct, Integer factorFrequency,
+			Set<ProductInCart> productInCartSet) {
 		super();
 		this.id = id;
 		this.frequencyCommandeProduct = frequencyCommandeProduct;
+		this.factorFrequency = factorFrequency;
 		this.productInCartSet = productInCartSet;
 	}
 
-	public FrequencyDeliveryType(String frequencyCommandeProduct, Set<ProductInCart> productInCartSet) {
+
+	public FrequencyDeliveryType(String frequencyCommandeProduct, Integer factorFrequency,
+			Set<ProductInCart> productInCartSet) {
 		super();
 		this.frequencyCommandeProduct = frequencyCommandeProduct;
+		this.factorFrequency = factorFrequency;
 		this.productInCartSet = productInCartSet;
 	}
+
 
 	public Long getId() {
 		return id;
 	}
 
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 
 	public String getFrequencyCommandeProduct() {
 		return frequencyCommandeProduct;
 	}
 
+
 	public void setFrequencyCommandeProduct(String frequencyCommandeProduct) {
 		this.frequencyCommandeProduct = frequencyCommandeProduct;
 	}
 
+
+	public Integer getFactorFrequency() {
+		return factorFrequency;
+	}
+
+
+	public void setFactorFrequency(Integer factorFrequency) {
+		this.factorFrequency = factorFrequency;
+	}
+
+
 	public Set<ProductInCart> getProductInCartSet() {
 		return productInCartSet;
 	}
+
 
 	public void setProductInCartSet(Set<ProductInCart> productInCartSet) {
 		this.productInCartSet = productInCartSet;

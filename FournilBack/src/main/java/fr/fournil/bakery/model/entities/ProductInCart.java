@@ -18,6 +18,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -42,6 +43,9 @@ public class ProductInCart {
 
 	@Min(1)
 	private Integer quantity;
+	
+	@OneToOne(cascade = { CascadeType.PERSIST }, fetch = FetchType.EAGER)
+	private Format format;
 
 	@ManyToOne(cascade = { CascadeType.PERSIST }, fetch = FetchType.EAGER)
 	private FrequencyDeliveryType frequencyDeliveryType;
@@ -61,37 +65,35 @@ public class ProductInCart {
 	}
 
 
-	
-	
-	public ProductInCart(Long id, Product product, @Min(1) Integer quantity,
+	public ProductInCart(Long id, Product product, @Min(1) Integer quantity, Format format,
 			FrequencyDeliveryType frequencyDeliveryType, double totalPricePerProduct, Set<ShoppingCart> shoppingCart) {
 		super();
 		this.id = product.getId();
 		this.product = product;
 		this.quantity = quantity;
+		this.format = format;
 		this.frequencyDeliveryType = frequencyDeliveryType;
-		this.totalPricePerProduct = totalPricePerProduct;
+		this.totalPricePerProduct =  (product.getProductPerKgPrice())*(format.getFormatWeight()*getQuantity())*frequencyDeliveryType.getFactorFrequency();
 		this.shoppingCart = shoppingCart;
 	}
 
 
 
-	public ProductInCart(Product product, @Min(1) Integer quantity, FrequencyDeliveryType frequencyDeliveryType,
-			double totalPricePerProduct, Set<ShoppingCart> shoppingCart) {
+	public ProductInCart(Product product, @Min(1) Integer quantity, Format format,
+			FrequencyDeliveryType frequencyDeliveryType, double totalPricePerProduct, Set<ShoppingCart> shoppingCart) {
 		super();
 		this.product = product;
 		this.quantity = quantity;
+		this.format = format;
 		this.frequencyDeliveryType = frequencyDeliveryType;
-		this.totalPricePerProduct = totalPricePerProduct;
+		this.totalPricePerProduct = (product.getProductPerKgPrice())*(format.getFormatWeight()*getQuantity())*frequencyDeliveryType.getFactorFrequency();
 		this.shoppingCart = shoppingCart;
 	}
 
 
 	public Long getId() {
-		return id;
+		return getProduct().getId();
 	}
-
-
 
 
 	public void setId(Long id) {
@@ -99,13 +101,9 @@ public class ProductInCart {
 	}
 
 
-
-
 	public Product getProduct() {
 		return product;
 	}
-
-
 
 
 	public void setProduct(Product product) {
@@ -113,13 +111,9 @@ public class ProductInCart {
 	}
 
 
-
-
 	public Integer getQuantity() {
 		return quantity;
 	}
-
-
 
 
 	public void setQuantity(Integer quantity) {
@@ -127,6 +121,14 @@ public class ProductInCart {
 	}
 
 
+	public Format getFormat() {
+		return format;
+	}
+
+
+	public void setFormat(Format format) {
+		this.format = format;
+	}
 
 
 	public FrequencyDeliveryType getFrequencyDeliveryType() {
@@ -134,20 +136,14 @@ public class ProductInCart {
 	}
 
 
-
-
 	public void setFrequencyDeliveryType(FrequencyDeliveryType frequencyDeliveryType) {
 		this.frequencyDeliveryType = frequencyDeliveryType;
 	}
 
-
-
-
+	@Transient
 	public double getTotalPricePerProduct() {
-		return totalPricePerProduct;
+		return (getProduct().getProductPerKgPrice())*(getFormat().getFormatWeight()*getQuantity())*getFrequencyDeliveryType().getFactorFrequency();
 	}
-
-
 
 
 	public void setTotalPricePerProduct(double totalPricePerProduct) {
@@ -155,20 +151,14 @@ public class ProductInCart {
 	}
 
 
-
-
 	public Set<ShoppingCart> getShoppingCart() {
 		return shoppingCart;
 	}
 
 
-
-
 	public void setShoppingCart(Set<ShoppingCart> shoppingCart) {
 		this.shoppingCart = shoppingCart;
 	}
-
-
 
 
 	@Override
@@ -181,7 +171,7 @@ public class ProductInCart {
 
 	@Override
 	public String toString() {
-		return "ProductInCart [id=" + id + ", product=" + product + ", quantity=" + quantity
+		return "ProductInCart [id=" + id + ", product=" + product + ", quantity=" + quantity+"Format="+ format
 				+ ", frequencyDeliveryType=" + frequencyDeliveryType + ", totalPricePerProduct=" + totalPricePerProduct
 				+ ", shoppingCart=" + shoppingCart + "]";
 	}

@@ -47,7 +47,7 @@ public class FrequencyDeliveryTypeController {
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<FrequencyDeliveryType> getFrequenceDeliveryTypeById(@PathVariable(value = "id") Long id) {
 		FrequencyDeliveryType frequenceDeliveryTypetById = this.frequencyDeliveryTypeService.getFrequencyDeliveryTypeById(id).orElseThrow(
-				() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Aucun produit trouvé avec l'id : " + id));
+				() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Aucune frequence avec l'id : " + id));
 		return new ResponseEntity<FrequencyDeliveryType>(frequenceDeliveryTypetById, HttpStatus.OK);
 	}
 	

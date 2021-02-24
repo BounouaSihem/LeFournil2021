@@ -3,6 +3,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DeliveryPointAdressAndDates } from 'src/app/models/delivery-point-adress-and-dates';
 import { Format } from 'src/app/models/format';
 import { Frequence } from 'src/app/models/frequence';
 import { PhotoProduct } from 'src/app/models/photo-product';
@@ -29,10 +30,12 @@ export class AddProductDialogComponent implements OnInit {
   public frequence: Frequence[];
   public frequencyCommandeProduct: String;
   public photoFirst : PhotoProduct;
-
+  public deliveryAdressAndDate: DeliveryPointAdressAndDates[];
+  public deliveryPointAdress:String;
   constructor(private productsService: ProductsService, private api: ApiHelperService, private route: ActivatedRoute, private router: Router, private http: HttpClient,
     private dialogRef: MatDialogRef<AddProductDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: DialogData) {
-
+      this.deliveryAdressAndDate=[];
+      this.deliveryPointAdress;
     if (data) {
       this.products = data.products;
       this.id = data.id;
@@ -61,11 +64,23 @@ export class AddProductDialogComponent implements OnInit {
     this.frequencyCommandeProduct;
     this.productQuantities;
     this.photoProductSet;
-
+    this.deliveryAdressAndDate;
+    this.deliveryPointAdress;
     console.log("this.data=");
     console.log(this.data);
+    this.getAllDelivery();
+    
 
   }
-
+ async getAllDelivery(){ 
+   await this.productsService.findAllDeliveryAdresse()
+  .then(res => {
+    this.deliveryAdressAndDate = res; 
+    console.log(this.deliveryAdressAndDate);
+    this.deliveryPointAdress=res.deliveryPointAdress;
+   // this.frequencyCommandeProduct = res.frequencyCommandeProduct;
+    return this.deliveryAdressAndDate;
+  });
+}
   ///////////////////////////////////////////////
 }

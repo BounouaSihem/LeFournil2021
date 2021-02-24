@@ -13,12 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import fr.fournil.bakery.model.entities.Commande;
+import fr.fournil.bakery.model.entities.DeliveryPointAdressAndDates;
 import fr.fournil.bakery.model.entities.Product;
 import fr.fournil.bakery.model.repositories.CommandeRepository;
 import fr.fournil.bakery.model.repositories.CustomerRepository;
 import fr.fournil.bakery.model.repositories.ProductRepository;
 import fr.fournil.bakery.model.services.CommandeService;
 import fr.fournil.bakery.model.services.CustomerService;
+import fr.fournil.bakery.model.services.DeliveryPointAdressAndDatesService;
 import fr.fournil.bakery.model.services.ProductService;
 
 @CrossOrigin(origins = "*")
@@ -44,6 +46,9 @@ public class CommandeController {
 	
 	@Autowired
 	private CommandeRepository commandeRepository;
+	
+	@Autowired
+	private  DeliveryPointAdressAndDatesService deliveryPointAdressAndDatesService;
 
 	public CommandeController(CustomerService customerService, CustomerRepository customerRepository,
 			ProductService productService, ProductRepository productRepository, CommandeService commandeService,
@@ -73,7 +78,12 @@ public class CommandeController {
 }
 	
 	
-	
+	@GetMapping(value ="/deliveryPointAdressAndDates")
+	public ResponseEntity<List<DeliveryPointAdressAndDates>> getAllAdresseDeliveryPoint() {
+		List<DeliveryPointAdressAndDates> listCommandesAdresse = this.deliveryPointAdressAndDatesService.getDeliveryPointAdressAndDatesList();
+		
+		return new ResponseEntity<List<DeliveryPointAdressAndDates>>(listCommandesAdresse, HttpStatus.OK);
+	}
 	
 	
 	

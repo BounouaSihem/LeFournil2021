@@ -13,6 +13,7 @@ import fr.fournil.bakery.model.entities.Product;
 public interface ProductRepository extends JpaRepository<Product, Long> {
 	List<Product> findAll();	
 	Optional<Product> findById(Long id);
+	//Product findById(Long id);
 	//List<Product> findAllOrderByFormatSetDesc();
 	/*List<Product> findAllByOrderByIdAsc();
 	List<Product> findAllAndForFormatSetOrderByIdAsc();

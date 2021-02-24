@@ -13,10 +13,27 @@ fxLayoutGap.xs="20px" fxLayoutAlign="center center">
         </div>
             <div class="product-details">
 
-                <div class="product-price">A partir de : {{product?.productPerKgPrice*product?.formatSet[0].formatWeight
+                <div class="product-price">Prix : à partir de {{product?.productPerKgPrice*product?.formatSet[0].formatWeight
                     | number:'1.2-2'}} €</div>
-                <div class="product-description">{{product?.productSpecification}}</div><br>
-                <div class="product-composition">{{product?.productComposition}} </div><br>
+                <div class="product-description">Description : {{product?.productSpecification}}</div><br>
+                <div class="product-composition">Composition : {{product?.productComposition}} </div><br>
+               
+                <br>
+                <mat-form-field appearance="fill" >
+                    <mat-label class="form-field-label">Selectionner l'adresse de livraison</mat-label>
+                    <mat-select >
+                        <div >
+                        <mat-option *ngFor="let adress of deliveryAdressAndDate " [value]="adress.deliveryPointAdress">
+                            
+                           <div >{{adress.deliveryPointAdress}}</div> 
+                        
+                        </mat-option>  
+                    </div>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+               
+               
                 <div class="form-button" fxLayout="row" fxLayout.xs="row">
                     <div class="product-form">
                         <mat-form-field appearance="fill">
@@ -65,8 +82,8 @@ fxLayoutGap.xs="20px" fxLayoutAlign="center center">
     </mat-dialog-content>
 
     <mat-dialog-actions align="end">
-        <button mat-button [mat-dialog-close]="data">Cancel</button>
-        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Install</button>
+        <button mat-button [mat-dialog-close]="data">Revenir à la liste des produits</button>
+        
     </mat-dialog-actions>
 
 </div>

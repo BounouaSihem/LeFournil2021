@@ -89,8 +89,8 @@ public class ProductController {
 
 	@GetMapping(value = "format")
 	public ResponseEntity<List<Format>> getAllFormatProduct() {
-		List<Format> listProducts = this.formatService.getFormatList();
-		return new ResponseEntity<List<Format>>(listProducts, HttpStatus.OK);
+		List<Format> listformats = this.formatService.getFormatList();
+		return new ResponseEntity<List<Format>>(listformats, HttpStatus.OK);
 	}
 	
 	

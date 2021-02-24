@@ -5,6 +5,7 @@
 	"product": {"id":1,"productName":"Pain de campagne"},
 	"quantity":2,
 	"frequencyDeliveryType":{"id":2},
+	"format":{"id":1,"formatType":"Baguette"}, 
 	"totalPricePerProduct":12.0,
 	"shoppingCart":[{"id": 1}]
 },
@@ -15,6 +16,7 @@
 	"product": {"id":2,"productName":"Pain aux céréales"},
 	"quantity":1,
 	"frequencyDeliveryType":{"id":1},
+	"format":{"id":6, "formatType":"Moyen batard"}, 
 	"totalPricePerProduct":3.0,
 	"shoppingCart":[{"id":2}]
 },
@@ -24,6 +26,7 @@
 	"product": {"id":3,"productName":"Pain bis ou semi complet"},
 	"quantity":2,
 	"frequencyDeliveryType":{"id":2},
+	"format":{"id":4,"formatType":"Grande miche"}, 
 	"totalPricePerProduct":12.0,
 	"shoppingCart":[{"id":2}]
 
@@ -35,6 +38,7 @@
 	"product": {"id":4,"productName":"Pain à  l'Engrain (ou petit Epeautre)"},
 	"quantity":5,
 	"frequencyDeliveryType":{"id":19},
+	"format":{"id":8,"formatType":"pavé droit (moulé)"}, 
 	"totalPricePerProduct":18.0,
 	"shoppingCart":[{"id":3}, {"id":5}]
 

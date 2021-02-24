@@ -1,132 +1,156 @@
 [
 {
     "id":1,
-	"frequencyCommandeProduct":"Option Ponctuelle"
+	"frequencyCommandeProduct":"Option Ponctuelle",
+	"factorFrequency":1
    		     
 },
 {
     "id":2,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 1 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 1 mois",
+	"factorFrequency":4
 			     
 },
 {
     "id":3,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 2 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 2 mois",
+	"factorFrequency":8
 	
 			     
 },
 {
     "id":4,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 3 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 3 mois",
+	"factorFrequency":12
 
 			     
 },
 {
     "id":5,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 4 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 4 mois",
+	"factorFrequency":16
 	
 			     
 },
 {
     "id":6,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 5 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 5 mois",
+	"factorFrequency":20
 			     
 },
 {
     "id":7,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 6 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 6 mois",
+	"factorFrequency":24
 			     
 },
 {
     "id":8,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 7 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 7 mois",
+	"factorFrequency":28
 			     
 },
 {
     "id":9,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 8 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 8 mois",
+	"factorFrequency":32
 			     
 },
 {
     "id":10,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 9 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 9 mois",
+	"factorFrequency":36
 			     
 },
 {
     "id":11,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 10 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 10 mois",
+	"factorFrequency":40
 			     
 },
 {
     "id":12,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 11 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 11 mois",
+	"factorFrequency":44
 			     
 },
 {
     "id":13,
-	"frequencyCommandeProduct":"Une fois par semaine pendant 12 mois"
+	"frequencyCommandeProduct":"Une fois par semaine pendant 12 mois",
+	"factorFrequency":48
 			     
 },
 {
     "id":14,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 1 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 1 mois",
+	"factorFrequency":2
 	
 			     
 },
 {
     "id":15,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 2 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 2 mois",
+	"factorFrequency":4
 			     
 },
 {
     "id":16,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 3 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 3 mois",
+	"factorFrequency":6
 			     
 },
 {
     "id":17,
 	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 4 mois",
-	"productInCartSet":[]
+	"factorFrequency":8
 			     
 },
 {
     "id":18,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 5 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 5 mois",
+	"factorFrequency":10
 			     
 },
 {
     "id":19,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 6 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 6 mois",
+	"factorFrequency":12
 			     
 },
 {
     "id":20,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 7 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 7 mois",
+	"factorFrequency":14
 			     
 },
 {
     "id":21,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 8 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 8 mois",
+	"factorFrequency":16
 			     
 },
 {
     "id":22,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 9 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 9 mois",
+	"factorFrequency":18
 			     
 },
 {
     "id":23,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 10 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 10 mois",
+	"factorFrequency":20
 			     
 },
 {
     "id":24,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 11 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 11 mois",
+	"factorFrequency":22
 			     
 },
 {
     "id":25,
-	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 12 mois"
+	"frequencyCommandeProduct":"Une fois tous les deux semaines pendant 12 mois",
+	"factorFrequency":24
 			     
 }
 

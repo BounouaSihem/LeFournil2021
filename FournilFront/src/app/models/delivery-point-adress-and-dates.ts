@@ -1,16 +1,17 @@
 import { Commande } from './commande';
 
-export class DeliveryPointAdressAndDates{
+export class DeliveryPointAdressAndDates {
 
     private _id: number;
-    private _deliveryPointAdressAndDates: DeliveryPointAdressAndDates;
+    private _deliveryPointAdress: String;
     private _deliveryDate: Date;
     private _orderDeadline: Date;
     private _commandeSet: Commande[];
 
-	constructor(id: number, deliveryPointAdressAndDates: DeliveryPointAdressAndDates, deliveryDate: Date, orderDeadline: Date, commandeSet: Commande[]) {
+
+	constructor(id: number, deliveryPointAdress: String, deliveryDate: Date, orderDeadline: Date, commandeSet: Commande[]) {
 		this._id = id;
-		this._deliveryPointAdressAndDates = deliveryPointAdressAndDates;
+		this._deliveryPointAdress = deliveryPointAdress;
 		this._deliveryDate = deliveryDate;
 		this._orderDeadline = orderDeadline;
 		this._commandeSet = commandeSet;
@@ -25,11 +26,11 @@ export class DeliveryPointAdressAndDates{
 	}
 
     /**
-     * Getter deliveryPointAdressAndDates
-     * @return {DeliveryPointAdressAndDates}
+     * Getter deliveryPointAdress
+     * @return {String}
      */
-	public get deliveryPointAdressAndDates(): DeliveryPointAdressAndDates {
-		return this._deliveryPointAdressAndDates;
+	public get deliveryPointAdress(): String {
+		return this._deliveryPointAdress;
 	}
 
     /**
@@ -65,11 +66,11 @@ export class DeliveryPointAdressAndDates{
 	}
 
     /**
-     * Setter deliveryPointAdressAndDates
-     * @param {DeliveryPointAdressAndDates} value
+     * Setter deliveryPointAdress
+     * @param {String} value
      */
-	public set deliveryPointAdressAndDates(value: DeliveryPointAdressAndDates) {
-		this._deliveryPointAdressAndDates = value;
+	public set deliveryPointAdress(value: String) {
+		this._deliveryPointAdress = value;
 	}
 
     /**
@@ -95,6 +96,7 @@ export class DeliveryPointAdressAndDates{
 	public set commandeSet(value: Commande[]) {
 		this._commandeSet = value;
 	}
+
 
 
 }

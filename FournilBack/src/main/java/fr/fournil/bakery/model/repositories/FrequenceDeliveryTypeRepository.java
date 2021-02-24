@@ -15,4 +15,5 @@ import fr.fournil.bakery.model.entities.Product;
 public interface FrequenceDeliveryTypeRepository extends JpaRepository<FrequencyDeliveryType, Long> {
 	List<FrequencyDeliveryType> findAll();
 	Optional<FrequencyDeliveryType> findById(Long id);
+	FrequencyDeliveryType  findByFrequencyCommandeProduct(String frequencyCommandeProduct);
 }
