@@ -1,3 +1,4 @@
+import { Format } from './format';
 import { Frequence } from './frequence';
 import { Product } from './product';
 
@@ -6,16 +7,20 @@ export class ProductInCart {
     private _id: number;
     private _product: Product;
     private _quantity: number;
-    private _frequence: Frequence;
-    private _TotalPricePerProduct: number;
+    private _format: Format;
+    private _frequencyDeliveryType: Frequence; 
+    private _totalPricePerProduct: number;
 
 
-	constructor(id: number, product: Product, quantity: number, frequence: Frequence, TotalPricePerProduct: number) {
+
+
+	constructor(id: number, product: Product, quantity: number, format: Format, frequencyDeliveryType: Frequence, totalPricePerProduct: number) {
 		this._id = id;
 		this._product = product;
 		this._quantity = quantity;
-		this._frequence = frequence;
-		this._TotalPricePerProduct = TotalPricePerProduct;
+		this._format = format;
+		this._frequencyDeliveryType = frequencyDeliveryType;
+		this._totalPricePerProduct = totalPricePerProduct;
 	}
 
     /**
@@ -43,19 +48,27 @@ export class ProductInCart {
 	}
 
     /**
-     * Getter frequence
-     * @return {Frequence}
+     * Getter format
+     * @return {Format}
      */
-	public get frequence(): Frequence {
-		return this._frequence;
+	public get format(): Format {
+		return this._format;
 	}
 
     /**
-     * Getter TotalPricePerProduct
+     * Getter frequencyDeliveryType
+     * @return {Frequence}
+     */
+	public get frequencyDeliveryType(): Frequence {
+		return this._frequencyDeliveryType;
+	}
+
+    /**
+     * Getter totalPricePerProduct
      * @return {number}
      */
-	public get TotalPricePerProduct(): number {
-		return this._TotalPricePerProduct;
+	public get totalPricePerProduct(): number {
+		return this._totalPricePerProduct;
 	}
 
     /**
@@ -83,22 +96,29 @@ export class ProductInCart {
 	}
 
     /**
-     * Setter frequence
-     * @param {Frequence} value
+     * Setter format
+     * @param {Format} value
      */
-	public set frequence(value: Frequence) {
-		this._frequence = value;
+	public set format(value: Format) {
+		this._format = value;
 	}
 
     /**
-     * Setter TotalPricePerProduct
-     * @param {number} value
+     * Setter frequencyDeliveryType
+     * @param {Frequence} value
      */
-	public set TotalPricePerProduct(value: number) {
-		this._TotalPricePerProduct = value;
+	public set frequencyDeliveryType(value: Frequence) {
+		this._frequencyDeliveryType = value;
 	}
 
-
+    /**
+     * Setter totalPricePerProduct
+     * @param {number} value
+     */
+	public set totalPricePerProduct(value: number) {
+		this._totalPricePerProduct = value;
+	}
+	
 
 
 }

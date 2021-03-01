@@ -46,6 +46,7 @@ export class ProductListComponent implements OnInit {
   public frequencyCommandeProduct: String;
   public photoFirst: PhotoProduct
   public data: DialogData;
+  public factorFrequency:number;
 
   constructor(private productsService: ProductsService, private router: Router,  private api: ApiHelperService, public dialog: MatDialog) {
     
@@ -56,10 +57,12 @@ export class ProductListComponent implements OnInit {
     this.productQuantities;
     this.id;
     this.product;
+    this.format;
     this.formatSet = [];
     this.photoProductSet = [];
     this.productInCart;
     this.photoFirst;
+    this.factorFrequency;
 
   }
 
@@ -119,6 +122,7 @@ export class ProductListComponent implements OnInit {
         this.frequence = res; 
         console.log(this.frequence);
         this.frequencyCommandeProduct = res.frequencyCommandeProduct;
+        this.factorFrequency=res.factorFrequency
         return this.frequence;
       });
 
@@ -129,6 +133,7 @@ export class ProductListComponent implements OnInit {
       products: this.products,
       product: this.product,
       formatSet: this.formatSet,
+      formatProduct:this.format,
       id: this.id,
       frequence: this.frequence,
       frequencyCommandeProduct:this.frequencyCommandeProduct,

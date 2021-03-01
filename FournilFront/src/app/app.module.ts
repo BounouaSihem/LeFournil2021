@@ -26,6 +26,7 @@ import { ProductComponent } from './home/product/product.component';
 import { ProductDetailsComponent } from './home/product/product-details/product-details.component';
 import { OrderFormValidationComponent } from './home/order-form-validation/order-form-validation.component';
 import { RouterModule } from '@angular/router';
+
 import { ProductsService } from './services/products.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -33,7 +34,7 @@ import {MatDialogModule, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { AddProductDialogComponent } from './home/product-list/add-product-dialog/add-product-dialog.component';
 import { MatDialogRef } from '@angular/material/dialog';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +70,9 @@ import { MatDialogRef } from '@angular/material/dialog';
     MatProgressSpinnerModule,
     FormsModule,
     MatDialogModule,
-    ScrollingModule
+    ScrollingModule,
+    ReactiveFormsModule,
+    RouterModule
   
 
   

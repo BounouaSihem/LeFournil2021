@@ -10,10 +10,11 @@ export class Format{
 	private _formatWeight: number ;
 
 
-	constructor(data:any ) {
-		this._id = data.id;
-		this._formatType = data.formatType;
-		this._formatWeight = data.formatWeight;
+
+	constructor(id: number, formatType: String , formatWeight: number ) {
+		this._id = id;
+		this._formatType = formatType;
+		this._formatWeight = formatWeight;
 	}
 
     /**
@@ -63,7 +64,7 @@ export class Format{
 	public set formatWeight(value: number ) {
 		this._formatWeight = value;
 	}
- 
+	
 
 
 }

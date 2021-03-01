@@ -2,6 +2,11 @@ import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
 import { ApiHelperService } from './api-helper.service';
 import {DomSanitizer} from '@angular/platform-browser';
+import { FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { ProductForm } from '../models/product-form';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,10 +14,12 @@ export class ProductsService {
 
   public products: Product[];
   public image_product:any;
+  public product: Product;
   id:number;
+  public dataForm:  FormGroup;
  // constructor() { }
 
- constructor(private api: ApiHelperService, private sanitizer: DomSanitizer ) {
+ constructor(private api: ApiHelperService, private sanitizer: DomSanitizer,private http: HttpClient ) {
   this.products = [];
   
 }
@@ -70,6 +77,9 @@ public getOnePhotobyProductId(photoId:number): Promise<any> {
   });
   return promise;
 }
-
+//Choose product to put in Cart 
+createProductInCart(formData: ProductForm ,id: number): Observable<any> {
+  return this.http.post(environment.base_url+ `/productsinCart/add_product/${id}`, formData);
+}
 
 }

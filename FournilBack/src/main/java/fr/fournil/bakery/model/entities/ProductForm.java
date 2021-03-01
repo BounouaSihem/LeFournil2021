@@ -14,8 +14,7 @@ public class ProductForm {
 	
 	 @Min(value = 1)
 	    private Integer quantity;
-	   @NotNull
-	    private Long productId;
+	  
 	   @NotNull
 	    private  String formatChoosen;
 	   @NotNull
@@ -23,11 +22,10 @@ public class ProductForm {
 		public ProductForm() {
 			super();
 		}
-		public ProductForm(@Min(1) Integer quantity,@NotNull Long productId,@NotNull String formatChoosen,
-				@NotEmpty String frequencyCommandeProduct) {
+		public ProductForm(@Min(1) Integer quantity, @NotNull String formatChoosen,
+				@NotNull String frequencyCommandeProduct) {
 			super();
 			this.quantity = quantity;
-			this.productId = productId;
 			this.formatChoosen = formatChoosen;
 			this.frequencyCommandeProduct = frequencyCommandeProduct;
 		}
@@ -36,12 +34,6 @@ public class ProductForm {
 		}
 		public void setQuantity(Integer quantity) {
 			this.quantity = quantity;
-		}
-		public Long getProductId() {
-			return productId;
-		}
-		public void setProductId(Long productId) {
-			this.productId = productId;
 		}
 		public String getFormatChoosen() {
 			return formatChoosen;

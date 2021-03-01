@@ -68,7 +68,7 @@ public class ProductInCart {
 	public ProductInCart(Long id, Product product, @Min(1) Integer quantity, Format format,
 			FrequencyDeliveryType frequencyDeliveryType, double totalPricePerProduct, Set<ShoppingCart> shoppingCart) {
 		super();
-		this.id = product.getId();
+		this.id = id;
 		this.product = product;
 		this.quantity = quantity;
 		this.format = format;
@@ -92,7 +92,7 @@ public class ProductInCart {
 
 
 	public Long getId() {
-		return getProduct().getId();
+		return id;
 	}
 
 

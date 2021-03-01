@@ -5,10 +5,14 @@ export class Frequence {
 
     private _id: number;
     private _frequencyCommandeProduct: String;
+    private _factorFrequency :number;
 
-	constructor(id: number, frequencyCommandeProduct: String) {
+
+
+	constructor(id: number, frequencyCommandeProduct: String, factorFrequency: number) {
 		this._id = id;
 		this._frequencyCommandeProduct = frequencyCommandeProduct;
+		this._factorFrequency = factorFrequency;
 	}
 
     /**
@@ -28,6 +32,14 @@ export class Frequence {
 	}
 
     /**
+     * Getter factorFrequency
+     * @return {number}
+     */
+	public get factorFrequency(): number {
+		return this._factorFrequency;
+	}
+
+    /**
      * Setter id
      * @param {number} value
      */
@@ -42,5 +54,16 @@ export class Frequence {
 	public set frequencyCommandeProduct(value: String) {
 		this._frequencyCommandeProduct = value;
 	}
+
+    /**
+     * Setter factorFrequency
+     * @param {number} value
+     */
+	public set factorFrequency(value: number) {
+		this._factorFrequency = value;
+	}
+	
+	
+	
 
 }

@@ -101,13 +101,13 @@ public class ProductInCartController {
 	// ajouter un produit dans le panier
 	@PostMapping(value="/add_product/{id}")
 	public ResponseEntity <ProductInCart>addProductInCart(@PathVariable(value = "id") Long id , @Valid @RequestBody ProductForm productForm) {
-		id=productForm.getProductId();
+		//id=productForm.getProductId();
 		ProductInCart productSelected=this.productInCartService.addAndSaveProductInCart(id,productForm).get();
 		if (!this.productInCartService.addAndSaveProductInCart(id,productForm).isPresent()) {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Aucun produit trouvé avec l'id :" + id);
 		} else
 		
-		return new ResponseEntity<ProductInCart>( productSelected, HttpStatus.OK);
+		return new ResponseEntity<ProductInCart>( productSelected, HttpStatus.CREATED);
 		}
 //////////////
 }
