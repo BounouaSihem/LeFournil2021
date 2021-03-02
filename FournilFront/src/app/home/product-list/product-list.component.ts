@@ -17,8 +17,10 @@ export interface DialogData {
   product: Product;
   id: number;
   formatSet: Format[];
+  formatSelected:Format;
   products: Product[];
   frequence: Frequence[];
+  frequenceComandeChoisie:Frequence;
   photoFirst: PhotoProduct
 }
 

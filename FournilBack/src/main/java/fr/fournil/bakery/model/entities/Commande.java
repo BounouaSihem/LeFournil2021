@@ -67,7 +67,7 @@ public class Commande {
 		super();
 		this.id = id;
 		this.customer = customer;
-		this.dateCommande = dateCommande;
+		this.dateCommande = new Date();
 		this.deliveryPointAdressAndDates = deliveryPointAdressAndDates;
 		this.statutCommande = statutCommande;
 		this.totalPriceByCommande = totalPriceByCommande;
@@ -79,7 +79,7 @@ public class Commande {
 			StatutCommande statutCommande, double totalPriceByCommande) {
 		super();
 		this.customer = customer;
-		this.dateCommande = dateCommande;
+		this.dateCommande = new Date();
 		this.deliveryPointAdressAndDates = deliveryPointAdressAndDates;
 		this.statutCommande = statutCommande;
 		this.totalPriceByCommande = totalPriceByCommande;

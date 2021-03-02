@@ -68,7 +68,7 @@ public class ProductInCart {
 	public ProductInCart(Long id, Product product, @Min(1) Integer quantity, Format format,
 			FrequencyDeliveryType frequencyDeliveryType, double totalPricePerProduct, Set<ShoppingCart> shoppingCart) {
 		super();
-		this.id = id;
+		this.id = product.getId();
 		this.product = product;
 		this.quantity = quantity;
 		this.format = format;
@@ -86,13 +86,13 @@ public class ProductInCart {
 		this.quantity = quantity;
 		this.format = format;
 		this.frequencyDeliveryType = frequencyDeliveryType;
-		this.totalPricePerProduct = (product.getProductPerKgPrice())*(format.getFormatWeight()*getQuantity())*frequencyDeliveryType.getFactorFrequency();
+		this.totalPricePerProduct = (product.getProductPerKgPrice())*(format.getFormatWeight()*getQuantity())*(frequencyDeliveryType.getFactorFrequency());
 		this.shoppingCart = shoppingCart;
 	}
 
 
 	public Long getId() {
-		return id;
+		return product.getId();
 	}
 
 
@@ -142,7 +142,7 @@ public class ProductInCart {
 
 	@Transient
 	public double getTotalPricePerProduct() {
-		return (getProduct().getProductPerKgPrice())*(getFormat().getFormatWeight()*getQuantity())*getFrequencyDeliveryType().getFactorFrequency();
+		return (getProduct().getProductPerKgPrice())*(getFormat().getFormatWeight()*getQuantity())*(getFrequencyDeliveryType().getFactorFrequency());
 	}
 
 

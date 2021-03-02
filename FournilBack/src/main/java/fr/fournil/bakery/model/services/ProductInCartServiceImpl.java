@@ -64,38 +64,6 @@ public class ProductInCartServiceImpl  implements ProductInCartService{
 		return productInCartRepository.findById(id);
 	}
 	
-	/*@Override
-	public Optional<ProductInCart> addAndSaveProductInCart(ProductInCart productToAdd,Long productId) {
-		Product product=productInCartRepository.findByProductId(productId);
-		productToAdd.setProduct(product);
-		productToAdd.setQuantity(productToAdd.getQuantity());
-		productToAdd.setFrequencyDeliveryType(productToAdd.getFrequencyDeliveryType());
-		productToAdd.setTotalPricePerProduct(productToAdd.getTotalPricePerProduct());
-		productInCartRepository.save(productToAdd);
-		return Optional.of(productToAdd);
-	}*/
-
-	/*@Override
-	public Optional<ProductInCart> addAndSaveProductInCart(Long productId, Integer quantity, String formatChoosen,
-			String frequencyCommandeProduct) {
-		Format oneFormat=  formatRepository.findByProductListId(productId);
-		oneFormat.setFormatType(formatChoosen);
-		Product product=productInCartRepository.findByProductId(productId);
-		//product.setFormatSet(oneFormat);
-		ProductInCart productToAdd=new ProductInCart();
-		FrequencyDeliveryType frequencyType=productToAdd.getFrequencyDeliveryType();
-		frequencyType.setFrequencyCommandeProduct(frequencyCommandeProduct);
-		
-		Set<Format> formatProduct=productToAdd.getProduct().getFormatSet();
-		
-		
-		productToAdd.setProduct(product);
-		productToAdd.setQuantity(quantity);
-		productToAdd.setFrequencyDeliveryType(frequencyType);
-		productToAdd.setTotalPricePerProduct(productToAdd.getTotalPricePerProduct());
-		productInCartRepository.save(productToAdd);
-		return Optional.of(productToAdd);
-	}*/
 
 	@Override
 	public Optional<ProductInCart> addAndSaveProductInCart(Long idProduct ,ProductForm productForm) {
@@ -105,36 +73,28 @@ public class ProductInCartServiceImpl  implements ProductInCartService{
 		//ProductInCart productInCart= productInCartRepository.findByProductId(productForm.getProductId());
 		//productInCart.setProduct(productggg);
 		// il ya une erreur à gere entre l'id du produit et le formatType dans le productForm faut ajouter une contrainte
-		Format oneFormatz=  this.formatRepository.findByFormatType(productForm.getFormatChoosen());
+	
 		Format oneFormat=  this.formatRepository.findByFormatType(productForm.getFormatChoosen());
 		FrequencyDeliveryType frenquencyType=frequenceDeliveryTypeRepository.findByFrequencyCommandeProduct(productForm.getFrequencyCommandeProduct());
 		Product oneProduct=productFromStock.get();
 		oneProduct.setId(idProduct);
 		oneProduct.setProductName(oneProduct.getProductName());
 		ProductInCart productToAdd=new ProductInCart();
+		//ProductInCart productToAdd=productInCartRepository.findByProductId(idProduct);
 		productToAdd.setId(oneProduct.getId());
 		 System.out.println("productToAdd.getId()" + oneProduct.getId());
 		productToAdd.setProduct(oneProduct);
 		productToAdd.setFrequencyDeliveryType( frenquencyType);
 		productToAdd.setQuantity(productForm.getQuantity());
 		productToAdd.setFormat(oneFormat);
+		productToAdd.setShoppingCart( productToAdd.getShoppingCart());
 		productToAdd.setTotalPricePerProduct(productToAdd.getTotalPricePerProduct());//calculé directement enforçant le constructeur
-		this.productInCartRepository.save(productToAdd);
+		productInCartRepository.save(productToAdd);
 		 System.out.println("productTotalPrice=" + productToAdd.getTotalPricePerProduct());
-		 System.out.println("productToAdd.getId()" + productToAdd.getId());
+		 //System.out.println("productToAdd.getId()" + productToAdd.getId());
 		return Optional.of(productToAdd);
 	}
-	/*public double calculatePriceOfProductIncart(Long idProduct, String formatType,String frequencyCommande,Integer quantity) {
-		double totalPricePerProduct=0;
-		Optional<Product> productFromStock= this.productRepository.findById(idProduct);
-		Format oneFormat=  this.formatRepository.findByProductListId(productFromStock.get().getId());
-		oneFormat.setFormatType(formatType);
-		FrequencyDeliveryType frenquencyType=frequenceDeliveryTypeRepository.findByFrequencyCommandeProduct(frequencyCommande);
-		
-		double priceFormatWeight=(productFromStock.get().getProductPerKgPrice())*(oneFormat.getFormatWeight())*quantity;
-		
-		return totalPricePerProduct;
-		}*/
+	
 	
 //////////////////////////////////////////////////////////	
 }

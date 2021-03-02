@@ -51,7 +51,7 @@
                                 <mat-label>Selectionner un format -</mat-label>
                                 <mat-select formControlName="formatChoosen" [errorStateMatcher]="matcher">
                                     <mat-option *ngFor="let format of formatSet"
-                                        name="format.formatWeight" [value]="format.formatType">
+                                        [value]="format.formatType">
 
                                         <div *ngIf="format.formatWeight < 1 ">
                                             {{format.formatType}}, {{format.formatWeight*1000}} gr ,
@@ -87,7 +87,7 @@
                             </mat-form-field>
                         </div>
                         <div class="boutoncommande">
-                            <button type="submit" button mat-raised-button [disabled]="!productFormGroup.valid">Ajouter
+                            <button type="submit" mat-button [mat-dialog-close]="data" mat-raised-button [disabled]="!productFormGroup.valid">Ajouter
                                 au panier</button>
                             <button button mat-raised-button (click)="resetForm()">Annuler la selection</button>
                         </div>
@@ -97,7 +97,7 @@
                 </form>
                 <div class="afficheprix" >
                   <p> total price : {{totalPrice}}</p>
-                    Prix total pour ce produit: {{product?.productPerKgPrice*productFormGroup.value.quantity*format?.formatWeight*frequenceComandeChoisie?.factorFrequency |
+                    Prix total pour ce produit: {{product?.productPerKgPrice*productFormGroup.value.quantity*formatSelected?.formatWeight*frequenceComandeChoisie?.factorFrequency |
                     number:'1.2-2'}} €
                 </div>
             </div>

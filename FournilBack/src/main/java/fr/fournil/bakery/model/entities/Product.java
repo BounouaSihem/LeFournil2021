@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -25,6 +26,7 @@ import com.fasterxml.jackson.annotation.*;
 @Table(name = "productSet")
 //@Inheritance(strategy=InheritanceType.JOINED)
 //@MappedSuperclass
+//@Embeddable
 public class Product {
 	 private static final long serialVersionUID = 1L;
 	 @Id

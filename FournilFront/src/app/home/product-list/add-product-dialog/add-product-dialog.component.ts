@@ -49,7 +49,7 @@ export class AddProductDialogComponent implements OnInit {
   public quantity: number;
   public formatWeight: number;
   //Pour le formulaire choix du produit
-
+ 
   productFormGroup: FormGroup;
   matcher = new MyErrorStateMatcher();
   //SubjectsArray: Subject[] ;
@@ -63,7 +63,8 @@ export class AddProductDialogComponent implements OnInit {
       this.id = data.id;
       this.product = data.product;
       this.formatSet = data.formatSet;
-      // this.formatWeight= data.formatProduct.formatWeight;
+      this.formatSelected=data.formatSelected;
+     //this.formatWeight= data.formatSelected.formatWeight;
       this.frequence = data.frequence;
       this.photoFirst = data.photoFirst
       this.data;
@@ -77,9 +78,9 @@ export class AddProductDialogComponent implements OnInit {
       this.producInCart;
       this.productsListInCart
       this.totalPrice = 0;
-      this.formatSelected;
+      //this.formatSelected;
       this.quantity;
-      this.format;
+     // this.format;
 
     }
   }
@@ -104,6 +105,7 @@ export class AddProductDialogComponent implements OnInit {
     this.format;
     this.getAllDeliveryAdress();
     this.reactiveForm();
+    
   }
 
   async getAllDeliveryAdress() {
@@ -130,9 +132,9 @@ export class AddProductDialogComponent implements OnInit {
 
     this.productFormGroup.get('formatChoosen').valueChanges.subscribe((newValueFormat) => {
       const format = this.formatSet.find(f => f.formatType == newValueFormat);
-      this.format = format;
-      this.format.formatWeight=format.formatWeight;
-      console.log(this.format.formatWeight);
+      this.formatSelected = format;
+     // this.formatSelected.formatWeight=format.formatWeight;
+      console.log(this.formatSelected);
     });
 
     this.productFormGroup.get('frequencyCommandeProduct').valueChanges.subscribe((newValueFrequence) => {
@@ -153,7 +155,7 @@ export class AddProductDialogComponent implements OnInit {
     if (this.productFormGroup.valid) {
       console.log(this.productFormGroup.value);
       this.addProduct();
-
+this.reactiveForm();
     } else {
       return;
     }
@@ -171,9 +173,9 @@ export class AddProductDialogComponent implements OnInit {
 
           this.id = dataProduct.product.id;
           this.formData = dataProduct;
-          this.productFormGroup.value.quantity = dataProduct.quantity;
-          this.productFormGroup.value.formatChoosen = dataProduct.format.formatType;
-          this.productFormGroup.value.frequencyCommandeProduct = dataProduct.frequencyDeliveryType.frequencyCommandeProduct;
+          //this.productFormGroup.value.quantity = dataProduct.quantity;
+          //this.productFormGroup.value.formatChoosen = dataProduct.format.formatType;
+          //this.productFormGroup.value.frequencyCommandeProduct = dataProduct.frequencyDeliveryType.frequencyCommandeProduct;
           this.producInCart = dataProduct;
           console.log("data:");
           console.log(this.producInCart);
@@ -204,9 +206,7 @@ export class AddProductDialogComponent implements OnInit {
 
   ///////////////////////////////////////////////
 
-  public onMatOptionChange(option, value) {
-    console.log(option, value);
-  }
+  
 
 
 }
