@@ -18,86 +18,104 @@
                 <div class="product-description">Description : {{product?.productSpecification}}</div><br>
                 <div class="product-composition">Composition : {{product?.productComposition}} </div><br>
 
+
+                <form>
+                    <br>
+                    <mat-form-field appearance="fill">
+                        <mat-label class="form-field-label">Selectionner l'adresse de livraison</mat-label>
+                        <mat-select>
+                            <div>
+                                <mat-option 
+                                    *ngFor="let adress of deliveryAdressAndDate" [value]="adress.deliveryPointAdress">
+
+                                    <div>{{adress.deliveryPointAdress}}</div>
+
+                                </mat-option>
+                            </div>
+                        </mat-select>
+
+                    </mat-form-field>
+                </form>
                 <br>
-                <mat-form-field appearance="fill">
-                    <mat-label class="form-field-label">Selectionner l'adresse de livraison</mat-label>
-                    <mat-select>
-                        <div>
-                            <mat-option *ngFor="let adress of deliveryAdressAndDate "
-                                [value]="adress.deliveryPointAdress">
+                <div class="choose-product">
+                    <form class="example-form" [formGroup]="productFormGroup" (ngSubmit)="onFormSubmit()">
+                        <div class="form-button" fxLayout="row" fxLayout.xs="row">
+                            <div class="product-form">
+                                <!-- *ngIf="adresseChoosen == deliveryAdressAndDate[0].deliveryPointAdress"-->
+                                hhhhhh
 
-                                <div>{{adress.deliveryPointAdress}}</div>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Choisir la quantité</mat-label>
+                                    <input matInput formControlName="quantity" type="number" min="1"
+                                        style="position:center" formControlName="quantity"
+                                        [errorStateMatcher]="matcher">
+                                    <mat-error *ngIf="productFormGroup.get('quantity').hasError('required')">
+                                        vous devez choisir une quantité
+                                    </mat-error>
+                                </mat-form-field>
 
-                            </mat-option>
-                        </div>
-                    </mat-select>
-                </mat-form-field>
-                <br>
-                <form class="example-form" [formGroup]="productFormGroup" (ngSubmit)="onFormSubmit()">
-                    <div class="form-button" fxLayout="row" fxLayout.xs="row">
-                        <div class="product-form">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Choisir la quantité</mat-label>
-                                <input matInput formControlName="quantity" type="number" min="1" style="position:center"
-                                    formControlName="quantity" [errorStateMatcher]="matcher">
-                                <mat-error *ngIf="productFormGroup.get('quantity').hasError('required')">
-                                    <!--[(ngModel)]="producInCart.quantity" -->
-                                    vous devez choisir une quantité
-                                </mat-error>
-                            </mat-form-field>
+                                <br>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Selectionner un format -</mat-label>
+                                    <mat-select formControlName="formatChoosen" [errorStateMatcher]="matcher">
+                                        <mat-option *ngFor="let format of formatSet" [value]="format.formatType">
 
-                            <br>
-                            <mat-form-field appearance="fill">
-                                <mat-label>Selectionner un format -</mat-label>
-                                <mat-select formControlName="formatChoosen" [errorStateMatcher]="matcher">
-                                    <mat-option *ngFor="let format of formatSet"
-                                        [value]="format.formatType">
-
-                                        <div *ngIf="format.formatWeight < 1 ">
-                                            {{format.formatType}}, {{format.formatWeight*1000}} gr ,
-                                            {{product.productPerKgPrice*format.formatWeight | number:'1.2-2'}} €</div>
-                                        <div *ngIf="format.formatWeight >= 1">
-                                            {{format.formatType}}, {{format.formatWeight}} Kg ,
-                                            {{product.productPerKgPrice*format.formatWeight | number:'1.2-2'}} €</div>
-
-                                    </mat-option>
-
-                                </mat-select>
-                                <mat-error *ngIf="productFormGroup.get('formatChoosen').hasError('required')">
-                                    Vous devez choisir un format
-                                </mat-error>
-                            </mat-form-field>
-                            <br>
-                            <mat-form-field appearance="fill">
-                                <mat-label class="form-field-label">Selectionner la fréquence de livraison</mat-label>
-                                <mat-select formControlName="frequencyCommandeProduct" [errorStateMatcher]="matcher">
-                                    <div>
-                                        <mat-option *ngFor="let frequence of frequence "
-                                            [value]="frequence.frequencyCommandeProduct">
-
-                                            <div>{{frequence.frequencyCommandeProduct}}</div>
+                                            <div *ngIf="format.formatWeight < 1 ">
+                                                {{format.formatType}}, {{format.formatWeight*1000}} gr ,
+                                                {{product.productPerKgPrice*format.formatWeight | number:'1.2-2'}} €
+                                            </div>
+                                            <div *ngIf="format.formatWeight >= 1">
+                                                {{format.formatType}}, {{format.formatWeight}} Kg ,
+                                                {{product.productPerKgPrice*format.formatWeight | number:'1.2-2'}} €
+                                            </div>
 
                                         </mat-option>
-                                    </div>
-                                </mat-select>
-                                <mat-error
-                                    *ngIf="productFormGroup.get('frequencyCommandeProduct').hasError('required')">
-                                    Vous devez choisir une frequence de livraison
-                                </mat-error>
-                            </mat-form-field>
-                        </div>
-                        <div class="boutoncommande">
-                            <button type="submit" mat-button [mat-dialog-close]="data" mat-raised-button [disabled]="!productFormGroup.valid">Ajouter
-                                au panier</button>
-                            <button button mat-raised-button (click)="resetForm()">Annuler la selection</button>
-                        </div>
+
+                                    </mat-select>
+                                    <mat-error *ngIf="productFormGroup.get('formatChoosen').hasError('required')">
+                                        Vous devez choisir un format
+                                    </mat-error>
+                                </mat-form-field>
+                                <br>
+                                <mat-form-field appearance="fill">
+                                    <mat-label class="form-field-label">Selectionner la fréquence de livraison
+                                    </mat-label>
+                                    <mat-select formControlName="frequencyCommandeProduct"
+                                        [errorStateMatcher]="matcher">
+                                        <div>
+                                            <mat-option *ngFor="let frequence of frequence "
+                                                [value]="frequence.frequencyCommandeProduct">
+
+                                                <div>{{frequence.frequencyCommandeProduct}}</div>
+
+                                            </mat-option>
+                                        </div>
+                                    </mat-select>
+                                    <mat-error
+                                        *ngIf="productFormGroup.get('frequencyCommandeProduct').hasError('required')">
+                                        Vous devez choisir une frequence de livraison
+                                    </mat-error>
+                                </mat-form-field>
 
 
-                    </div>
-                </form>
-                <div class="afficheprix" >
-                  <p> total price : {{totalPrice}}</p>
-                    Prix total pour ce produit: {{product?.productPerKgPrice*productFormGroup.value.quantity*formatSelected?.formatWeight*frequenceComandeChoisie?.factorFrequency |
+                            </div>
+
+                            <div class="boutoncommande">
+                                <button type="submit" mat-button [mat-dialog-close]="data" mat-raised-button
+                                    [disabled]="!productFormGroup.valid">Ajouter
+                                    au panier</button>
+                                <button button mat-raised-button (click)="resetForm()">Annuler la selection</button>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+                <div class="afficheprix">
+                    <p> total price : {{totalPrice}}</p>
+                    Prix total pour ce produit:
+                    {{product?.productPerKgPrice*productFormGroup.value.quantity*formatSelected?.formatWeight*frequenceComandeChoisie?.factorFrequency
+                    |
                     number:'1.2-2'}} €
                 </div>
             </div>

@@ -35,6 +35,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { AddProductDialogComponent } from './home/product-list/add-product-dialog/add-product-dialog.component';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MyCartComponent } from './home/my-cart/my-cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductComponent,
     ProductDetailsComponent,
     OrderFormValidationComponent,
-    AddProductDialogComponent
+    AddProductDialogComponent,
+    MyCartComponent
   ],
   imports: [
     BrowserModule,

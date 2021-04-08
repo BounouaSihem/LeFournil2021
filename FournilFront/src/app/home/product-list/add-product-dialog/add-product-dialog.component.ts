@@ -48,6 +48,7 @@ export class AddProductDialogComponent implements OnInit {
   public factor: number;
   public quantity: number;
   public formatWeight: number;
+  public adresseChoosen;
   //Pour le formulaire choix du produit
  
   productFormGroup: FormGroup;
@@ -155,7 +156,7 @@ export class AddProductDialogComponent implements OnInit {
     if (this.productFormGroup.valid) {
       console.log(this.productFormGroup.value);
       this.addProduct();
-this.reactiveForm();
+      this.reactiveForm();
     } else {
       return;
     }
@@ -173,9 +174,6 @@ this.reactiveForm();
 
           this.id = dataProduct.product.id;
           this.formData = dataProduct;
-          //this.productFormGroup.value.quantity = dataProduct.quantity;
-          //this.productFormGroup.value.formatChoosen = dataProduct.format.formatType;
-          //this.productFormGroup.value.frequencyCommandeProduct = dataProduct.frequencyDeliveryType.frequencyCommandeProduct;
           this.producInCart = dataProduct;
           console.log("data:");
           console.log(this.producInCart);

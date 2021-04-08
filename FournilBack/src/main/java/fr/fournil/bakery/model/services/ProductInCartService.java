@@ -18,4 +18,6 @@ public interface ProductInCartService {
 	//Optional<ProductInCart> addAndSaveProductInCart(Long id, ProductForm productForm);
 	
 	Optional<ProductInCart> addAndSaveProductInCart(Long idProduct, ProductForm productForm);
+	Optional<ProductInCart> editAndSaveProductInCart(Long shoppingCartId, Long idProduct, ProductForm productForm);
+	void deleteOneProductIncart(Long shoppingCartId, Long id);
 }
