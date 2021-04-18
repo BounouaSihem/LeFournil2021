@@ -55,6 +55,9 @@ export class AddProductDialogComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
   //SubjectsArray: Subject[] ;
   ////////////////////////////
+  //sideNavOpenMonPanier
+mode = new FormControl('over');
+shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
   constructor(private productsService: ProductsService, private api: ApiHelperService, private route: ActivatedRoute, private router: Router, private http: HttpClient,
     private dialogRef: MatDialogRef<AddProductDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: DialogData, public fb: FormBuilder) {
     this.deliveryAdressAndDate = [];

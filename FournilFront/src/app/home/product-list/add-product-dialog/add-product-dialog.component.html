@@ -1,6 +1,9 @@
+
 <div *ngIf="data" classe="container-add-product" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="20px"
     fxLayoutGap.xs="20px" fxLayoutAlign="center center">
     <!--*ngIf="data" -->
+    
+        
     <h2 mat-dialog-title>
         <div class="product-title">{{product?.productName}}</div>
     </h2>
@@ -101,9 +104,16 @@
                             </div>
 
                             <div class="boutoncommande">
+                                
                                 <button type="submit" mat-button [mat-dialog-close]="data" mat-raised-button
-                                    [disabled]="!productFormGroup.valid">Ajouter
+                                    [disabled]="!productFormGroup.valid"  >Ajouter
                                     au panier</button>
+
+                                   
+
+
+
+
                                 <button button mat-raised-button (click)="resetForm()">Annuler la selection</button>
                             </div>
 
@@ -131,3 +141,5 @@
     </mat-dialog-actions>
 
 </div>
+
+

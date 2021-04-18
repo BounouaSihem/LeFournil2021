@@ -26,7 +26,6 @@ import { ProductComponent } from './home/product/product.component';
 import { ProductDetailsComponent } from './home/product/product-details/product-details.component';
 import { OrderFormValidationComponent } from './home/order-form-validation/order-form-validation.component';
 import { RouterModule } from '@angular/router';
-
 import { ProductsService } from './services/products.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -36,6 +35,10 @@ import { AddProductDialogComponent } from './home/product-list/add-product-dialo
 import { MatDialogRef } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyCartComponent } from './home/my-cart/my-cart.component';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +77,9 @@ import { MyCartComponent } from './home/my-cart/my-cart.component';
     MatDialogModule,
     ScrollingModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    MatNativeDateModule,
+    
   
 
   
@@ -85,7 +90,7 @@ import { MyCartComponent } from './home/my-cart/my-cart.component';
   ],
   exports: [AddProductDialogComponent],
   providers: [
-    ProductsService,
+    ProductsService, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } }
   ],
   bootstrap: [AppComponent]
 })

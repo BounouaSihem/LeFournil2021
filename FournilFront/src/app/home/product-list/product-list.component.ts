@@ -12,7 +12,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { AddProductDialogComponent } from './add-product-dialog/add-product-dialog.component';
 import { ApiHelperService } from 'src/app/services/api-helper.service';
 import { Router } from '@angular/router';
-
+import {FormControl} from '@angular/forms';
 export interface DialogData {
   product: Product;
   id: number;
